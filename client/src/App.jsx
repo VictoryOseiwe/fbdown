@@ -10,9 +10,12 @@ export default function App() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/videoInfo", {
-        videoUrl,
-      });
+      const response = await axios.post(
+        "https://fbdownbackend.vercel.app/videoInfo",
+        {
+          videoUrl,
+        }
+      );
 
       setVideoInfo(response.data);
       setError("");
